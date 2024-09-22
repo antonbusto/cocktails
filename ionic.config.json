@@ -1,0 +1,7 @@
+{
+  "name": "cocktailsApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

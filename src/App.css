@@ -1,0 +1,131 @@
+/* General layout for cocktails and ingredients */
+.lista-cocktails, .lista-ingredientes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 10px;
+}
+
+/* Style for the cards containing cocktails and ingredients */
+.lista-cocktails .ion-card, .lista-ingredientes .ion-card {
+  width: 260px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lista-cocktails .ion-card:hover, .lista-ingredientes .ion-card:hover {
+  transform: translateY(-5px); /* Hover effect: elevate card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling inside cards */
+.lista-cocktails img, .lista-ingredientes img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Header styling for search input */
+.cabecera {
+  padding: 15px;
+  background-color: var(--ion-color-primary);
+  color: white;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecera input {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Pagination container */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for elegance */
+}
+
+/* Buttons for pagination */
+.ion-button.paginacion {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 50%; /* Circular buttons */
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 45px;
+  min-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef;
+  color: var(--ion-color-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.ion-button.paginacion:hover {
+  background-color: var(--ion-color-primary);
+  color: white;
+  transform: scale(1.05); /* Small scale effect on hover */
+}
+
+.ion-button.paginacion.active {
+  background-color: var(--ion-color-primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Elevate the active button */
+  transform: scale(1.1); /* Bigger scale effect for the active page */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lista-cocktails, .lista-ingredientes {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .lista-cocktails .ion-card, .lista-ingredientes .ion-card {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .cabecera input {
+    width: 95%;
+  }
+
+  .ion-button.paginacion {
+    font-size: 0.8rem;
+    min-width: 35px;
+    min-height: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lista-cocktails, .lista-ingredientes {
+    gap: 30px;
+  }
+
+  .lista-cocktails .ion-card, .lista-ingredientes .ion-card {
+    width: 300px;
+  }
+}
