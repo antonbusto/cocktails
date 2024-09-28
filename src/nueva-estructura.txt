@@ -1,26 +1,23 @@
-Quiero añadir a esta app los ingredientes de los cocktails, de forma que en los detalles de los coktails también aparezcan sus ingredientes. 
-Añade los archivos con su código necesario.
-Haz un listado de la nueva estructura de la app indicando la trayectoria y los nombres de cada archivo.
-
-Direcciones de la API:
-
-Search ingredient by name
-www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka
-
-Lookup ingredient by ID
-www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552
-
-Search by ingredient
-www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
-www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka
-
-List the categories ingredients
-www.thecocktaildb.com/api/json/v1/1/list.php?i=list
-
-Ingredient Thumbnails
-www.thecocktaildb.com/images/ingredients/gin-Small.png
-(100x100 pixels)
-www.thecocktaildb.com/images/ingredients/gin-Medium.png
-(350x350 pixels)
-www.thecocktaildb.com/images/ingredients/gin.png
-(700x700 pixels)
+cocktailsApp/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── componentes/
+│   │   ├── Cabecera.jsx
+│   │   ├── ListaCocktails.jsx
+│   │   ├── ListaIngredientes.jsx  <-- Nuevo archivo
+│   │   ├── CocktailCard.jsx
+│   │   ├── IngredienteCard.jsx    <-- Nuevo archivo
+│   ├── pages/
+│   │   ├── Principal.jsx
+│   │   ├── DetallesCocktail.jsx
+│   │   └── DetallesIngrediente.jsx <-- Nuevo archivo
+│   ├── services/
+│   │   ├── api.js  <-- Modificado para incluir las nuevas llamadas a la API de ingredientes
+│   ├── App.jsx
+│   └── App.css
+│
+├── package.json
+└── README.md
